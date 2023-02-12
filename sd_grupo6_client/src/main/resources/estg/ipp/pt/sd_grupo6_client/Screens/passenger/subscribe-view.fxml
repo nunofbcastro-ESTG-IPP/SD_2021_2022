@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" prefHeight="500.0" prefWidth="585.0" styleClass="mylistview" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estg.ipp.pt.sd_grupo6_client.ScreensController.passenger.SubscribeController">
+<VBox fx:id="content" prefHeight="500.0" prefWidth="585.0" spacing="20.0">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
+</ScrollPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estg.ipp.pt.sd_grupo6_client.ScreensController.AuthenticationController">
+    <left>
+        <VBox alignment="CENTER" prefHeight="500.0" prefWidth="350.0" spacing="25.0" styleClass="linear-grad">
+            <children>
+                <ImageView fitHeight="136.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../logo-white.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+    </left>
+    <right>
+        <StackPane fx:id="Content">
+            <children>
+                <VBox fx:id="SignIn" alignment="CENTER_LEFT" prefHeight="450.0" prefWidth="500.0" spacing="15.0">
+                    <children>
+                        <Label styleClass="h3" text="Login">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="SignInEmail" prefHeight="40.0" promptText="Email" />
+                        <PasswordField fx:id="SignInPassword" prefHeight="40.0" promptText="Palavra-Passe" />
+                        <Label fx:id="SignInError" textFill="RED" visible="false" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="421.0" spacing="40.0">
+                            <children>
+                                <Label text="Esqueceu a sua senha?" textFill="#757474" />
+                                <Button mnemonicParsing="false" onAction="#onSignInClick" prefHeight="38.0" prefWidth="113.0" styleClass="button1" text="Entrar" />
+                            </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#onSignInSignUpClick" prefHeight="57.0" prefWidth="420.0" styleClass="button2" text="Não tem uma conta? Registar-se" />
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="40.0" right="40.0" top="15.0" />
+                    </padding>
+                </VBox>
+                <ScrollPane fx:id="SignUp" fitToHeight="false" fitToWidth="true" prefHeight="450.0" prefWidth="500.0" styleClass="mylistview" visible="false">
+                    <content>
+                        <VBox alignment="CENTER_LEFT" spacing="15.0">
+                            <children>
+                                <Label styleClass="h3" text="Registo">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="SignUpUsername" prefHeight="40.0" promptText="Username" />
+                                <TextField fx:id="SignUpEmail" prefHeight="40.0" promptText="Email" />
+                                <CheckComboBox fx:id="linesComboBox" prefHeight="40.0" prefWidth="450.0" title="Linhas" />
+                                <PasswordField fx:id="SignUpPassword" prefHeight="40.0" promptText="Palavra-Passe" />
+                                <PasswordField fx:id="SignUpPasswordConfirmation" prefHeight="40.0" promptText="Confirmação da Palavra-Passe" />
+                                <Label fx:id="SignUpError" textFill="RED" />
+                                <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="421.0" spacing="40.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#onSignUpClick" prefHeight="38.0" prefWidth="113.0" styleClass="button1" text="Registar" />
+                                    </children>
+                                </HBox>
+                                <Button mnemonicParsing="false" onAction="#onSignUpSignInClick" prefHeight="57.0" prefWidth="420.0" styleClass="button2" text="Já tem uma conta? Logar-se" />
+                            </children>
+                            <padding>
+                                <Insets bottom="15.0" left="40.0" right="40.0" top="15.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </StackPane>
+    </right>
+    <center>
+    </center>
+</BorderPane>

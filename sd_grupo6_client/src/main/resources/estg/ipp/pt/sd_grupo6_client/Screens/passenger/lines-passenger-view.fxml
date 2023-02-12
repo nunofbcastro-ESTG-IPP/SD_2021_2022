@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="585.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estg.ipp.pt.sd_grupo6_client.ScreensController.passenger.LinesPassengerController">
+   <children>
+      <ComboBox fx:id="selectBox" onAction="#changeLine" prefWidth="150.0">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </ComboBox>
+      <ScrollPane fitToWidth="true" fitToHeight="true" prefHeight="426.0" prefWidth="585.0" styleClass="mylistview">
+         <content>
+            <VBox fx:id="content" prefHeight="456.0" prefWidth="570.0" spacing="25">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></VBox>
+         </content>
+      </ScrollPane>
+      <HBox prefHeight="28.0" prefWidth="585.0" spacing="20.0">
+         <children>
+            <ComboBox fx:id="selectBoxMessage" prefHeight="25.0" prefWidth="98.0" />
+            <TextField fx:id="messageTextField" prefHeight="25.0" prefWidth="353.0" />
+            <Button fx:id="buttonSendMessage" mnemonicParsing="false" onAction="#onSendClick" styleClass="button1" text="Enviar" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

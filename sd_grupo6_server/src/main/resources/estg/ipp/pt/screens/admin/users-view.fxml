@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<ScrollPane fitToWidth="true" fitToHeight="true"  prefHeight="500.0" prefWidth="585.0" stylesheets="@../../style.css" styleClass="mylistview" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estg.ipp.pt.screenscontroller.admin.UsersController">
+   <content>
+      <VBox fx:id="content" prefHeight="500.0" prefWidth="585.0" spacing="20.0">
+      <padding>
+          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      </VBox>
+   </content>
+</ScrollPane>
